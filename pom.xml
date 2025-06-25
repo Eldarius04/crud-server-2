@@ -66,8 +66,11 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <path>/crud-server</path>
-                    <port>9090</port>
+                    <path>/</path>
+                    <port>8080</port>
+                    <systemProperties>
+                        <org.apache.catalina.startup.ContextConfig.jarsToSkip>gson*.jar</org.apache.catalina.startup.ContextConfig.jarsToSkip>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
