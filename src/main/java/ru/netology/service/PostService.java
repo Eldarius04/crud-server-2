@@ -1,18 +1,17 @@
 package ru.netology.service;
 
 import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.netology.repository.PostRepository;
-import ru.netology.model.Post;
+import java.io.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.util.List;
-
+@Service
 public class PostService {
   private final PostRepository repository;
   private final Gson gson = new Gson();
 
+  @Autowired
   public PostService(PostRepository repository) {
     this.repository = repository;
   }
